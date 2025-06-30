@@ -1,0 +1,257 @@
+*{
+  font-family: 'Press Start 2P', monospace;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #fdeef8;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Press Start 2P', monospace;
+}
+
+a{
+  text-decoration: none;
+}
+
+
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3vmin;
+  width: 90%;
+  max-width: 500px;
+  padding: 4vmin;
+  box-sizing: border-box;
+  background-color: #fff6fb;
+  border-radius: 3vmin;
+}
+
+#cat {
+  width: 45vmin;
+  height: auto;
+  max-width: 100%;
+  image-rendering: pixelated;
+}
+
+.indicators {
+  display: flex;
+  flex-direction: column;
+  gap: 2vmin;
+  width: 100%;
+}
+
+.indicators div {
+  display: flex;
+  align-items: center;
+  gap: 2vmin;
+}
+
+progress {
+  flex: 1;
+  height: 3vmin;
+  appearance: none;
+  -webkit-appearance: none;
+  border-radius: 2vmin;
+  overflow: hidden;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #ffe6f0;
+}
+
+progress::-webkit-progress-value {
+  background-color: #ffcbe0;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3vmin;
+}
+
+button {
+  font-size: 7vmin;
+  padding: 3vmin;
+  background-color: #ffcbe0;
+  border: none;
+  border-radius: 3vmin;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background-color: #ffb4d0;
+}
+
+.secret-menu {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vmin;
+  width: 100%;
+}
+
+.secret-menu input {
+  padding: 2.5vmin;
+  font-size: 4.5vmin;
+  border: 1px solid #ddd;
+  border-radius: 2vmin;
+  width: 60vmin;
+  max-width: 90%;
+}
+
+.secret-menu button {
+  font-size: 4.5vmin;
+  padding: 2.5vmin 4vmin;
+  background-color: #c4e0ff;
+  border: none;
+  border-radius: 3vmin;
+}
+
+.secret-menu button:hover {
+  background-color: #aad6ff;
+}
+
+.secret-question {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3vmin;
+  background: #fff6fb;
+  padding: 4vmin;
+  border-radius: 3vmin;
+  text-align: center;
+  width: 90%;
+  max-width: 500px;
+  box-sizing: border-box;
+
+  /* новое позиционирование поверх всего */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  box-shadow: 0 0 5vmin rgba(0,0,0,0.3);
+}
+
+.secret-question p {
+  font-size: 5vmin;
+  margin: 0;
+  color: #aa3366;
+}
+
+.secret-question button {
+  font-size: 4.5vmin;
+  padding: 2.5vmin 5vmin;
+  background-color: #ffcbe0;
+  border: none;
+  border-radius: 3vmin;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.secret-question button:hover {
+  background-color: #ffb4d0;
+}
+
+
+
+#statusText {
+  height: 7vmin;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#splashScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fdeef8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: opacity 1s ease;
+}
+
+.splash-content {
+  text-align: center;
+  font-family: 'Press Start 2P', monospace;
+}
+
+#splashScreen h1 {
+  font-size: 10vmin;
+  margin: 0;
+  color: #aa3366;
+  font-family: 'Arial', sans-serif;
+}
+
+#splashScreen p {
+  font-size: 5vmin;
+  color: #c05070;
+  margin-top: 3vmin;
+}
+
+.dialog-window {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3vmin;
+  background: #fff6fb;
+  padding: 4vmin;
+  border-radius: 3vmin;
+  text-align: center;
+  width: 90%;
+  max-width: 500px;
+  box-sizing: border-box;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  box-shadow: 0 0 5vmin rgba(0,0,0,0.3);
+}
+
+.dialog-window p {
+  font-size: 5vmin;
+  margin: 0;
+  color: #aa3366;
+}
+
+.dialog-window button {
+  font-size: 4.5vmin;
+  padding: 2.5vmin 5vmin;
+  background-color: #ffcbe0;
+  border: none;
+  border-radius: 3vmin;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.dialog-window button:hover {
+  background-color: #ffb4d0;
+}
+
+#gameDialogButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 2vmin;
+}
