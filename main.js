@@ -104,7 +104,7 @@ function submitSecret() {
 }
 
 function showSecretDialog() {
-  document.getElementById('secretText').innerHTML = 'Ты разблокировала секретную комнату, нажми <a href="https://t.me/paranoidghoul">сюда</a>';
+  document.getElementById('secretText').innerHTML = 'Ты разблокировала секретную комнату, нажми <a href="https://t.me/+MD1kRPQgYLE5ZDIy">сюда</a>';
   document.getElementById('secretDialog').style.display = 'flex';
 }
 
