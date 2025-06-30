@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Pastel Cat Care</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap&subset=latin,cyrillic" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="splashScreen">
+        <div class="splash-content">
+            <h1>MeowSoft</h1>
+            <p>загрузка игры...</p>
+        </div>
+    </div>
+    
+
+  <div class="game">
+    <img src="assets/cat_idle.png" alt="котик" id="cat">
+    <p id="statusText" style="font-size:5vmin; margin: 0; color:#aa3366;"></p>
+    <div class="indicators">
+      <div>🥩<progress id="hunger" value="0" max="100"></progress></div>
+      <div>✋<progress id="boredom" value="0" max="100"></progress></div>
+      <div>🛁<progress id="sleepiness" value="0" max="100"></progress></div>
+    </div>
+
+    <div class="controls">
+      <button onclick="feedCat()">🥩</button>
+      <button onclick="playWithCat()">✋</button>
+      <button onclick="washCat()">🛁</button>
+      <button onclick="toggleSecretMenu()">🔐</button>
+    </div>
+
+    <div class="secret-menu" id="secretMenu">
+      <input type="text" id="secretCode" placeholder="код...">
+      <button onclick="submitSecret()">ОК</button>
+    </div>
+    <div class="dialog-window" id="gameDialog">
+        <p id="gameDialogText">Мяу! Хочешь поиграть со мной?</p>
+        <div id="gameDialogButtons">
+            <button onclick="handleDialogAnswer(0)">Да!</button>
+            <button onclick="handleDialogAnswer(1)">Потом</button>
+        </div>
+    </div>
+
+    <div class="dialog-window" id="secretQuestion">
+        <p id="gameDialogText">Мяу! Хочешь расскажу секрет?</p>
+        <div id="gameDialogButtons">
+            <button onclick="acceptSecret()">Да</button>
+            <button onclick="declineSecret()">Нетъ</button>
+        </div>
+    </div>
+    <div class="dialog-window" id="secretDialog">
+        <p id="secretText">Ты открыла секрет! 🐾</p>
+        <div id="secretButtons">
+            <button onclick="closeSecretDialog()">Закрыть</button>
+        </div>
+    </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
